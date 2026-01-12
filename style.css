@@ -1,0 +1,82 @@
+/*
+Theme Name: Summit Marketing
+Theme URI: 
+Author: Drew Reutlinger
+Author URI: https://wyodrew.com
+Description: A minimal, modern Full Site Editing starter theme for professional WordPress projects. Designed for clarity, restraint, and maintainability.
+Requires at least: 6.4
+Tested up to: 6.5
+Requires PHP: 8.1
+Version: 0.1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: wyodrew-starter
+Tags: full-site-editing, block-patterns, custom-colors, custom-spacing, accessibility-ready
+*/
+
+/*
+----------------------------------------------------------------
+Base Notes
+----------------------------------------------------------------
+
+This theme intentionally keeps CSS minimal.
+
+• Global styles, colors, typography, and spacing are defined in theme.json
+• Layout and structure are handled via block templates and patterns
+• CSS is added here only when:
+  - WordPress core does not provide the needed control
+  - A small, targeted override is required
+  - A component cannot be expressed cleanly via blocks alone
+
+The goal is clarity and restraint — not cleverness.
+*/
+
+/* --------------------------------------------------------------
+Global Box Model
+-------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------
+Focus States (Accessibility)
+-------------------------------------------------------------- */
+
+:focus-visible {
+  outline: 2px solid var(--wp--preset--color--accent);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------
+Utility Overrides (Use Sparingly)
+-------------------------------------------------------------- */
+
+/*
+Example:
+.u-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+*/
+
+/* --------------------------------------------------------------
+Block Tweaks (Only When Necessary)
+-------------------------------------------------------------- */
+
+/*
+Example:
+.wp-block-navigation a {
+  text-decoration: none;
+}
+*/
+
+/* --------------------------------------------------------------
+End of File
+-------------------------------------------------------------- */
