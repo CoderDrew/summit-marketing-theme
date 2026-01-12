@@ -1,0 +1,326 @@
+/* ==============================================================
+Global Box Model
+============================================================== */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-padding-top: var(--wp-admin--admin-bar--height, 0px);
+}
+
+
+/* ==============================================================
+Accessibility
+============================================================== */
+
+:focus-visible {
+	outline: 2px solid var(--wp--preset--color--accent);
+	outline-offset: 2px;
+}
+
+/* ==============================================================
+Block Enhancements (Only When Needed)
+============================================================== */
+
+/* Card hover effects */
+.service-card,
+.metric-card,
+.testimonial {
+	border: 1px solid rgba(255, 255, 255, 0.06);
+	border-radius: 6px;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover,
+.metric-card:hover,
+.testimonial:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Decorative section dividers */
+.section-services,
+.section-process,
+.section-metrics,
+.section-testimonials {
+	position: relative;
+}
+
+.section-services::before,
+.section-metrics::before {
+	content: "";
+	display: block;
+	height: 1px;
+	margin-bottom: var(--wp--preset--spacing--lg);
+	background: rgba(255, 255, 255, 0.05);
+}
+
+/* Buttons */
+.wp-block-button__link {
+	transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.wp-block-button__link:hover {
+	transform: translateY(-1px);
+}
+
+/* ==============================================================
+Header / Navigation (Sticky + Animated)
+============================================================== */
+
+/* Sticky shell */
+header.wp-block-template-part {
+	position: sticky !important;
+	top: var(--wp-admin--admin-bar--height, 0px);
+	z-index: 1000;
+}
+
+.wp-block-template-part > .site-header {
+	background-color: transparent;
+}
+
+.wp-block-template-part > .site-header::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-color: rgba(245, 247, 250, 0.95);
+	z-index: -1;
+	transform: translateY(-100%);
+	transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.page-loaded .wp-block-template-part > .site-header::before {
+	transform: translateY(0);
+}
+
+
+
+.site-header__inner {
+	--header-padding-y: 1.75rem;
+	--header-padding-x: 2rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	width: 100%;
+	max-width: var(--wp--style--global--wide-size);
+	margin-inline: auto;
+
+	min-height: 100px;
+
+	padding: var(--header-padding-y) var(--header-padding-x);
+
+	/* 👇 background belongs HERE */
+	background: transparent
+	border-radius: 0; /* optional, keeps edges crisp */
+
+	transform: translateY(-100%);
+	opacity: 0;
+
+	transition:
+		transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+		opacity 0.4s ease,
+		padding 0.45s cubic-bezier(0.4, 0, 0.2, 1) 0.15s,
+		min-height 0.45s cubic-bezier(0.4, 0, 0.2, 1) 0.15s,
+		background-color 0.25s ease,
+		box-shadow 0.25s ease;
+}
+
+
+
+.site-header__inner .wp-block-navigation {
+	justify-self: center;
+}
+
+/* Page load entrance */
+.page-loaded .site-header__inner {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+/* Shrink on scroll */
+.header-scrolled .site-header__inner {
+	--header-padding-y: 0.85rem;
+	min-height: 72px;
+}
+
+/* Sticky state polish */
+.header-scrolled .wp-block-template-part > .site-header {
+	backdrop-filter: blur(8px);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.header-scrolled .wp-block-template-part > .site-header::before {
+	background-color: rgba(245, 247, 250, 0.9);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	.site-header__inner {
+		transition: none;
+		transform: none;
+		opacity: 1;
+	}
+}
+
+
+
+/* ------------------------------
+Site logo
+------------------------------ */
+
+.site-logo {
+	display: inline-flex;
+	align-items: center;
+	text-decoration: none;
+	transition: opacity 0.2s ease;
+}
+
+.site-logo:hover {
+	opacity: 0.8;
+}
+
+.site-logo svg {
+	display: block;
+}
+
+/* Optional logo shrink */
+.site-header .wp-block-site-logo img {
+	transition: transform 0.25s ease;
+}
+
+.header-scrolled .site-header .wp-block-site-logo img {
+	transform: scale(0.85);
+}
+
+/* ------------------------------
+Navigation
+------------------------------ */
+
+ul.wp-block-navigation__container {
+	gap: 30px !important;
+}
+
+/* Animated underline */
+.primary-nav .wp-block-navigation-item__content {
+	position: relative;
+	display: inline-block;
+	padding-bottom: 0.35em;
+	overflow: visible;
+	text-decoration: none;
+}
+
+.primary-nav .wp-block-navigation-item__content::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0.05em;
+	height: 2px;
+	background: var(--wp--preset--color--accent);
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 220ms ease;
+}
+
+.primary-nav .wp-block-navigation-item__content:hover::after,
+.primary-nav .wp-block-navigation-item__content:focus-visible::after {
+	transform: scaleX(1);
+}
+
+/* Header CTA */
+.site-header .wp-block-button__link {
+	font-size: 0.875rem;
+	font-weight: 600;
+	padding: 0.625rem 1.25rem;
+	border-radius: 6px;
+}
+
+/* ------------------------------
+Responsive header
+------------------------------ */
+
+@media (max-width: 781px) {
+	.site-header {
+		flex-wrap: wrap;
+	}
+
+	.site-header .wp-block-navigation {
+		order: 3;
+		width: 100%;
+		margin-top: var(--wp--preset--spacing--sm);
+	}
+}
+
+/* ==============================================================
+Hero – Metrics
+============================================================== */
+
+.hero-with-metrics .wp-block-columns {
+	align-items: center;
+}
+
+.hero-with-metrics .wp-block-group.has-graphite-background-color {
+	min-width: 200px;
+	border: 1px solid rgba(255, 255, 255, 0.06);
+	transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+		box-shadow 0.3s ease,
+		border-color 0.3s ease;
+}
+
+.hero-with-metrics .wp-block-group.has-graphite-background-color:hover {
+	transform: translateY(-4px) scale(1.02);
+	box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+	border-color: rgba(59, 130, 246, 0.3);
+}
+
+.hero-with-metrics .has-summit-blue-color {
+	transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.hero-with-metrics .wp-block-group:hover .has-summit-blue-color {
+	text-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+.hero-with-metrics .wp-block-column:last-child .wp-block-group {
+	width: 100%;
+}
+
+/* ------------------------------
+Hero responsive
+------------------------------ */
+
+@media (max-width: 781px) {
+	.hero-with-metrics .wp-block-columns {
+		flex-direction: column;
+		gap: var(--wp--preset--spacing--lg);
+	}
+
+	.hero-with-metrics h1,
+	.hero-with-metrics .wp-block-paragraph {
+		text-align: center;
+	}
+
+	.hero-with-metrics .wp-block-buttons {
+		justify-content: center;
+	}
+}
+
+/* ==============================================================
+Reduced Motion
+============================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+	.site-header,
+	.service-card,
+	.metric-card,
+	.testimonial,
+	.wp-block-button__link {
+		transition: none;
+	}
+}

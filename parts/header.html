@@ -1,19 +1,86 @@
-<!-- wp:group {"className":"site-header","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|sm","bottom":"var:preset|spacing|sm","left":"var:preset|spacing|md","right":"var:preset|spacing|md"}}},"layout":{"type":"constrained"}} -->
+<!-- wp:group {"align":"full","className":"site-header","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull site-header">
-	<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
-	<div class="wp-block-group">
-		<!-- wp:site-logo {"width":120} /-->
+  <!-- wp:group {"className":"site-header__inner","style":{"layout":{"selfStretch":"fit","flexSize":null}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+  <div class="wp-block-group site-header__inner">
+    <!-- wp:html -->
+    <a href="#" class="site-logo">
+      <svg
+        viewBox="0 0 420 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="transition-all duration-300 h-10"
+        style="width: auto; height: 2.5rem"
+      >
+        <g transform="translate(0, 10)">
+          <path
+            d="M16 60 L40 40 L64 60"
+            stroke="black"
+            stroke-width="5"
+            stroke-linecap="square"
+            stroke-linejoin="miter"
+            fill="none"
+            opacity="0.3"
+          ></path>
+          <path
+            d="M16 44 L40 24 L64 44"
+            stroke="black"
+            stroke-width="5"
+            stroke-linecap="square"
+            stroke-linejoin="miter"
+            fill="none"
+            opacity="0.6"
+          ></path>
+          <path
+            d="M16 28 L40 8 L64 28"
+            stroke="black"
+            stroke-width="5"
+            stroke-linecap="square"
+            stroke-linejoin="miter"
+            fill="none"
+          ></path>
+        </g>
+        <text
+          x="100"
+          y="58"
+          fill="black"
+          style="
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 52px;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+          "
+        >
+          SUMMIT
+        </text>
+        <rect x="100" y="72" width="80" height="2.5" fill="black"></rect>
+      </svg>
+    </a>
+    <!-- /wp:html -->
 
-		<!-- wp:navigation {"layout":{"type":"flex","justifyContent":"right"},"className":"primary-nav"} /-->
+    <!-- wp:navigation {"ref":4,"textColor":"midnight","className":"primary-nav","style":{"spacing":{"blockGap":"40px"},"typography":{"fontStyle":"normal","fontWeight":"500"}},"fontSize":"sm","layout":{"type":"flex","justifyContent":"center"}} /-->
 
-		<!-- wp:buttons -->
-		<div class="wp-block-buttons">
-			<!-- wp:button {"backgroundColor":"summit-blue","textColor":"cloud"} -->
-			<div class="wp-block-button"><a class="wp-block-button__link has-cloud-color has-summit-blue-background-color has-text-color has-background wp-element-button">Start My Growth</a></div>
-			<!-- /wp:button -->
-		</div>
-		<!-- /wp:buttons -->
-	</div>
-	<!-- /wp:group -->
+    <!-- wp:buttons {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"fontSize":"sm","layout":{"type":"flex","justifyContent":"right"}} -->
+    <div
+      class="wp-block-buttons has-custom-font-size has-sm-font-size"
+      style="font-style: normal; font-weight: 600"
+    >
+      <!-- wp:button {"backgroundColor":"midnight","textColor":"cloud","style":{"spacing":{"padding":{"top":"0.625rem","bottom":"0.625rem","left":"1.25rem","right":"1.25rem"}}}} -->
+      <div class="wp-block-button">
+        <a
+          class="wp-block-button__link has-cloud-color has-midnight-background-color has-text-color has-background wp-element-button"
+          style="
+            padding-top: 0.625rem;
+            padding-right: 1.25rem;
+            padding-bottom: 0.625rem;
+            padding-left: 1.25rem;
+          "
+          >Start Project</a
+        >
+      </div>
+      <!-- /wp:button -->
+    </div>
+    <!-- /wp:buttons -->
+  </div>
+  <!-- /wp:group -->
 </div>
 <!-- /wp:group -->

@@ -16,7 +16,8 @@ if (! defined('ABSPATH')) {
 /**
  * Theme setup
  */
-function summit_marketing_setup() {
+function summit_marketing_setup()
+{
     // Add support for editor styles
     add_theme_support('editor-styles');
 
@@ -24,3 +25,34 @@ function summit_marketing_setup() {
     // add_editor_style('assets/css/editor-style.css');
 }
 add_action('after_setup_theme', 'summit_marketing_setup');
+
+/**
+ * Register block patterns
+ */
+function summit_marketing_register_patterns()
+{
+    register_block_pattern_category('summit', array(
+        'label' => __('Summit Patterns', 'summit-marketing')
+    ));
+}
+add_action('init', 'summit_marketing_register_patterns');
+
+/**
+ * Enqueue theme assets
+ */
+add_action('wp_enqueue_scripts', function () {
+    wp_enqueue_style(
+        'summit-main',
+        get_theme_file_uri('/assets/css/main.css'),
+        [],
+        wp_get_theme()->get('Version')
+    );
+
+    wp_enqueue_script(
+        'animations',
+        get_theme_file_uri('/assets/js/animations.js'),
+        [],
+        wp_get_theme()->get('Version'),
+        true
+    );
+});
