@@ -222,7 +222,7 @@ ul.wp-block-navigation__container {
 	right: 0;
 	bottom: 0.05em;
 	height: 2px;
-	background: var(--wp--preset--color--accent);
+	background: var(--wp--preset--color--summit-blue);
 	transform: scaleX(0);
 	transform-origin: left;
 	transition: transform 220ms ease;
@@ -261,12 +261,22 @@ Responsive header
 Hero – Metrics
 ============================================================== */
 
+/* Full viewport height hero */
+.hero-with-metrics {
+	min-height: calc(100vh - var(--wp-admin--admin-bar--height, 0px));
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .hero-with-metrics .wp-block-columns {
 	align-items: center;
 }
 
 .hero-with-metrics .wp-block-group.has-graphite-background-color {
 	min-width: 200px;
+	min-height: 8rem;
+	padding: 2.5rem !important;
 	border: 1px solid rgba(255, 255, 255, 0.06);
 	transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
 		box-shadow 0.3s ease,
@@ -290,6 +300,60 @@ Hero – Metrics
 .hero-with-metrics .wp-block-column:last-child .wp-block-group {
 	width: 100%;
 }
+
+.hero-with-metrics {
+  position: relative;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: none; /* purely decorative */
+}
+
+/* Text */
+.scroll-indicator p {
+  margin: 0;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  color: var(--wp--preset--color--mist);
+  position: relative;
+}
+
+/* Arrow */
+.scroll-indicator p::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 0.75rem auto 0;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+
+/* Bounce animation (motion-safe) */
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-indicator {
+    animation: scroll-bounce 2.25s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+
+  @keyframes scroll-bounce {
+    0%,
+    100% {
+      transform: translate(-50%, 0);
+      opacity: 0.85;
+    }
+    50% {
+      transform: translate(-50%, 8px);
+      opacity: 1;
+    }
+  }
+}
+
 
 /* ------------------------------
 Hero responsive

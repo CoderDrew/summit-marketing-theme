@@ -9,16 +9,6 @@
       "wideSize": "1400px"
     },
 
-    "typography": {
-      "fontFamilies": [
-        {
-          "fontFamily": "ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-          "slug": "primary",
-          "name": "Primary"
-        }
-      ]
-    },
-
     "color": {
       "defaultPalette": false,
       "palette": [
@@ -26,6 +16,7 @@
         { "slug": "graphite", "color": "#141A21", "name": "Graphite" },
         { "slug": "steel", "color": "#2A3441", "name": "Steel Gray" },
         { "slug": "mist", "color": "#8FA4BF", "name": "Mist Gray" },
+        { "slug": "frost", "color": "#E4E7EC", "name": "Frost Gray" },
         { "slug": "cloud", "color": "#F5F7FA", "name": "Cloud White" },
         { "slug": "summit-blue", "color": "#3B82F6", "name": "Summit Blue" },
         { "slug": "ice-blue", "color": "#93C5FD", "name": "Ice Blue" }
@@ -49,15 +40,18 @@
         { "slug": "xl", "size": "1.375rem", "name": "XL" },
         { "slug": "2xl", "size": "1.75rem", "name": "2XL" },
         { "slug": "3xl", "size": "2.25rem", "name": "3XL" },
+        { "slug": "4xl", "size": "3.75rem", "name": "4XL" },
         {
           "slug": "hero",
-          "size": "clamp(2.75rem, 6vw, 4rem)",
+          "size": "clamp(3rem, 8vw, 8rem)",
           "name": "Hero"
         }
       ]
     },
 
     "spacing": {
+      "padding": true,
+      "margin": true,
       "units": ["px", "rem", "vw"],
       "spacingSizes": [
         { "slug": "xs", "size": "0.5rem", "name": "XS" },
