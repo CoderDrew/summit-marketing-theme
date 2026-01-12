@@ -1,24 +1,28 @@
-# Starter Theme
+# Summit Marketing Theme
 
-A modern WordPress theme built with the block editor and full site editing capabilities.
+A modern WordPress theme built with the block editor and full site editing capabilities for Summit Marketing.
 
 ## Project Structure
 
 ```
-starter theme/
+summit-marketing-theme/
 ├── functions.php          # Theme functionality and hooks
 ├── style.css             # Theme stylesheet and metadata
 ├── theme.json            # Block editor settings and theme configuration
 ├── assets/
 │   ├── css/             # Additional stylesheets
+│   │   └── base.css
 │   ├── fonts/           # Custom fonts
 │   ├── images/          # Theme images and icons
 │   └── js/              # JavaScript files
+│       └── base.js
 ├── parts/               # Reusable template parts
 │   ├── footer.html
 │   └── header.html
 ├── patterns/            # Block patterns for quick layouts
+│   └── hero-home.php
 └── templates/           # Full-page templates
+    ├── front-page.html
     └── index.html
 ```
 
@@ -33,10 +37,10 @@ starter theme/
 
 ## Installation
 
-1. Upload the `starter theme` folder to `/wp-content/themes/` in your WordPress installation
+1. Upload the `summit-marketing-theme` folder to `/wp-content/themes/` in your WordPress installation
 2. Log in to the WordPress admin panel
 3. Navigate to **Appearance > Themes**
-4. Activate the Starter Theme
+4. Activate the Summit Marketing Theme
 
 ## Configuration
 
