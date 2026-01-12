@@ -1,13 +1,19 @@
-<!-- wp:group {"className":"site-header","layout":{"type":"flex","justifyContent":"space-between","alignItems":"center"}} -->
+<!-- wp:group {"className":"site-header","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|sm","bottom":"var:preset|spacing|sm","left":"var:preset|spacing|md","right":"var:preset|spacing|md"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull site-header">
+	<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
+	<div class="wp-block-group">
+		<!-- wp:site-logo {"width":120} /-->
 
-<!-- wp:site-logo {"width":120} /-->
+		<!-- wp:navigation {"layout":{"type":"flex","justifyContent":"right"},"className":"primary-nav"} /-->
 
-<!-- wp:navigation {"layout":{"type":"flex","justifyContent":"right"},"className":"primary-nav"} /-->
-
-<!-- wp:buttons -->
-<!-- wp:button {"className":"btn-primary"} -->
-<a class="wp-block-button__link">Start My Growth</a>
-<!-- /wp:button -->
-<!-- /wp:buttons -->
-
+		<!-- wp:buttons -->
+		<div class="wp-block-buttons">
+			<!-- wp:button {"backgroundColor":"summit-blue","textColor":"cloud"} -->
+			<div class="wp-block-button"><a class="wp-block-button__link has-cloud-color has-summit-blue-background-color has-text-color has-background wp-element-button">Start My Growth</a></div>
+			<!-- /wp:button -->
+		</div>
+		<!-- /wp:buttons -->
+	</div>
+	<!-- /wp:group -->
+</div>
 <!-- /wp:group -->

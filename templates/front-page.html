@@ -1,31 +1,64 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","className":"site-main"} -->
+<!-- wp:group {"tagName":"main","className":"site-main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group site-main">
+	<!-- wp:group {"className":"section-hero","align":"full","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull section-hero">
+		<!-- wp:pattern {"slug":"summit/hero-home"} /-->
+	</div>
+	<!-- /wp:group -->
 
-<!-- wp:group {"className":"section-hero"} -->
-<!-- wp:pattern {"slug":"summit/hero-home"} /-->
-<!-- /wp:group -->
+	<!-- wp:group {"className":"section-services","align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|xl","bottom":"var:preset|spacing|xl"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignwide section-services">
+		<!-- wp:heading {"level":2,"fontSize":"2xl","textAlign":"center","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|lg"}}}} -->
+		<h2 class="wp-block-heading has-text-align-center has-2-xl-font-size">Services</h2>
+		<!-- /wp:heading -->
 
-<!-- wp:group {"className":"section-services"} -->
-<!-- wp:pattern {"slug":"summit/service-card"} /-->
-<!-- /wp:group -->
+		<!-- wp:group {"layout":{"type":"grid","columnCount":3,"minimumColumnWidth":null}} -->
+		<div class="wp-block-group">
+			<!-- wp:pattern {"slug":"summit/service-card"} /-->
+			<!-- wp:pattern {"slug":"summit/service-card"} /-->
+			<!-- wp:pattern {"slug":"summit/service-card"} /-->
+		</div>
+		<!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
 
-<!-- wp:group {"className":"section-process"} -->
-<!-- wp:pattern {"slug":"summit/process-section"} /-->
-<!-- /wp:group -->
+	<!-- wp:pattern {"slug":"summit/process-section"} /-->
 
-<!-- wp:group {"className":"section-metrics"} -->
-<!-- wp:pattern {"slug":"summit/metric-card"} /-->
-<!-- /wp:group -->
+	<!-- wp:group {"className":"section-metrics","align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|xl","bottom":"var:preset|spacing|xl"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignwide section-metrics">
+		<!-- wp:heading {"level":2,"fontSize":"2xl","textAlign":"center","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|lg"}}}} -->
+		<h2 class="wp-block-heading has-text-align-center has-2-xl-font-size">Results</h2>
+		<!-- /wp:heading -->
 
-<!-- wp:group {"className":"section-testimonials"} -->
-<!-- wp:pattern {"slug":"summit/testimonial"} /-->
-<!-- /wp:group -->
+		<!-- wp:group {"layout":{"type":"grid","columnCount":3,"minimumColumnWidth":null}} -->
+		<div class="wp-block-group">
+			<!-- wp:pattern {"slug":"summit/metric-card"} /-->
+			<!-- wp:pattern {"slug":"summit/metric-card"} /-->
+			<!-- wp:pattern {"slug":"summit/metric-card"} /-->
+		</div>
+		<!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
 
-<!-- wp:group {"className":"section-cta"} -->
-<!-- wp:pattern {"slug":"summit/cta-primary"} /-->
-<!-- /wp:group -->
+	<!-- wp:group {"className":"section-testimonials","align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|xl","bottom":"var:preset|spacing|xl"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignwide section-testimonials">
+		<!-- wp:heading {"level":2,"fontSize":"2xl","textAlign":"center","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|lg"}}}} -->
+		<h2 class="wp-block-heading has-text-align-center has-2-xl-font-size">What Clients Say</h2>
+		<!-- /wp:heading -->
 
+		<!-- wp:group {"layout":{"type":"grid","columnCount":2,"minimumColumnWidth":null}} -->
+		<div class="wp-block-group">
+			<!-- wp:pattern {"slug":"summit/testimonial"} /-->
+			<!-- wp:pattern {"slug":"summit/testimonial"} /-->
+		</div>
+		<!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:pattern {"slug":"summit/cta-primary"} /-->
+</main>
 <!-- /wp:group -->
 
 <!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

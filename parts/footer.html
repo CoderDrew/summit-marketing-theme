@@ -1,16 +1,27 @@
-<!-- wp:group {"className":"site-footer"} -->
+<!-- wp:group {"className":"site-footer","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|lg","bottom":"var:preset|spacing|lg","left":"var:preset|spacing|md","right":"var:preset|spacing|md"}},"elements":{"link":{"color":{"text":"var:preset|color|mist"}}}},"backgroundColor":"graphite","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull site-footer has-graphite-background-color has-background has-link-color">
+	<!-- wp:group {"className":"footer-inner","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
+	<div class="wp-block-group footer-inner">
+		<!-- wp:group {"layout":{"type":"constrained"}} -->
+		<div class="wp-block-group">
+			<!-- wp:site-title {"level":0,"fontSize":"lg"} /-->
 
-<!-- wp:group {"className":"footer-inner","layout":{"type":"flex","justifyContent":"space-between"}} -->
+			<!-- wp:paragraph {"textColor":"mist","fontSize":"sm"} -->
+			<p class="has-mist-color has-text-color has-sm-font-size">Performance-driven growth marketing.</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
 
-<!-- wp:group -->
-<!-- wp:site-title /-->
-<!-- wp:paragraph -->
-<p>Performance-driven growth marketing.</p>
-<!-- /wp:paragraph -->
-<!-- /wp:group -->
+		<!-- wp:navigation {"className":"footer-nav","layout":{"type":"flex","orientation":"vertical"}} /-->
+	</div>
+	<!-- /wp:group -->
 
-<!-- wp:navigation {"className":"footer-nav"} /-->
+	<!-- wp:separator {"opacity":"css","backgroundColor":"steel","style":{"spacing":{"margin":{"top":"var:preset|spacing|md","bottom":"var:preset|spacing|md"}}}} -->
+	<hr class="wp-block-separator has-text-color has-steel-color has-css-opacity has-steel-background-color has-background"/>
+	<!-- /wp:separator -->
 
-<!-- /wp:group -->
-
+	<!-- wp:paragraph {"align":"center","textColor":"mist","fontSize":"sm"} -->
+	<p class="has-text-align-center has-mist-color has-text-color has-sm-font-size">© 2026 Summit Marketing. Built with WordPress.</p>
+	<!-- /wp:paragraph -->
+</div>
 <!-- /wp:group -->
