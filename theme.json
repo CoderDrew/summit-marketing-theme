@@ -18,9 +18,18 @@
         { "slug": "mist", "color": "#8FA4BF", "name": "Mist Gray" },
         { "slug": "frost", "color": "#E4E7EC", "name": "Frost Gray" },
         { "slug": "cloud", "color": "#F5F7FA", "name": "Cloud White" },
+        { "slug": "pearl", "color": "#F7F8FA", "name": "Pearl" },
+        { "slug": "white", "color": "#FFFFFF", "name": "White" },
         { "slug": "summit-blue", "color": "#3B82F6", "name": "Summit Blue" },
         { "slug": "ice-blue", "color": "#93C5FD", "name": "Ice Blue" }
       ]
+    },
+
+    "border": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true
     },
 
     "typography": {
@@ -41,6 +50,9 @@
         { "slug": "2xl", "size": "1.75rem", "name": "2XL" },
         { "slug": "3xl", "size": "2.25rem", "name": "3XL" },
         { "slug": "4xl", "size": "3.75rem", "name": "4XL" },
+        { "slug": "5xl", "size": "4.5rem", "name": "5XL" },
+        { "slug": "6xl", "size": "5.5rem", "name": "6XL" },
+        { "slug": "7xl", "size": "6.5rem", "name": "7XL" },
         {
           "slug": "hero",
           "size": "clamp(3rem, 8vw, 8rem)",
