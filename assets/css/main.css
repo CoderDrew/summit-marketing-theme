@@ -61,18 +61,111 @@ Block Enhancements (Only When Needed)
 /* Decorative section dividers */
 .section-services,
 .section-process,
-.section-metrics,
 .section-testimonials {
 	position: relative;
 }
 
-.section-services::before,
-.section-metrics::before {
+.section-services::before {
 	content: "";
 	display: block;
 	height: 1px;
 	margin-bottom: var(--wp--preset--spacing--lg);
 	background: rgba(255, 255, 255, 0.05);
+}
+
+/* ==============================================================
+Metrics Section
+============================================================== */
+
+.section-metrics {
+	position: relative;
+	overflow: hidden;
+}
+
+/* Large background "PROVEN" text */
+.section-metrics::before {
+	content: "PROVEN";
+	position: absolute;
+	top: 100px;
+	left: -2%;
+	font-size: clamp(8rem, 18vw, 16rem);
+	font-weight: 700;
+	line-height: 0.85;
+	color: rgba(0, 0, 0, 0.03);
+	pointer-events: none;
+	z-index: 0;
+	white-space: nowrap;
+}
+
+.section-metrics > * {
+	position: relative;
+	z-index: 1;
+}
+
+/* Metric cards */
+.section-metrics .metric-card {
+  position: relative;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+  /* Drawn border setup */
+  background:
+    linear-gradient(#3b82f6 0 0) top left,
+    linear-gradient(#3b82f6 0 0) top right,
+    linear-gradient(#3b82f6 0 0) bottom right,
+    linear-gradient(#3b82f6 0 0) bottom left;
+  background-size:
+    0 2px,
+    2px 0,
+    0 2px,
+    2px 0;
+  background-repeat: no-repeat;
+
+  transition:
+    background-size 0.3s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.section-metrics .metric-card:hover {
+  background-size:
+    100% 2px,
+    2px 100%,
+    100% 2px,
+    2px 100%;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+
+/* Staggered card layout - every other card pushed down */
+.section-metrics .wp-block-column:nth-child(even) {
+	transform: translateY(40px);
+}
+
+.section-metrics .wp-block-column:nth-child(even) .metric-card:hover {
+	transform: translateY(-4px);
+}
+
+/* Metric suffix styling */
+.metric-suffix {
+	font-weight: 400;
+	opacity: 0.5;
+}
+
+/* ==============================================================
+Logo Bar
+============================================================== */
+
+.section-logos .logo-item {
+	cursor: default;
+	transition: color 0.3s ease;
+}
+
+.section-logos .logo-item:hover {
+	color: var(--wp--preset--color--midnight) !important;
 }
 
 /* Process step arrows */
