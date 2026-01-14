@@ -45,14 +45,14 @@ add_action('wp_enqueue_scripts', function () {
         'summit-main',
         get_theme_file_uri('/assets/css/main.css'),
         [],
-        wp_get_theme()->get('Version')
+        filemtime(get_theme_file_path('/assets/css/main.css'))
     );
 
     wp_enqueue_script(
         'animations',
         get_theme_file_uri('/assets/js/animations.js'),
         [],
-        wp_get_theme()->get('Version'),
+        filemtime(get_theme_file_path('/assets/js/animations.js')),
         true
     );
 });
