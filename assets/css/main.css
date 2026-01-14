@@ -578,6 +578,50 @@ Hero responsive
 }
 
 /* ==============================================================
+Footer
+============================================================== */
+
+.site-footer {
+	position: relative;
+}
+
+/* Footer navigation links */
+.site-footer .footer-nav .wp-block-navigation-item__content {
+	color: var(--wp--preset--color--white);
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.site-footer .footer-nav .wp-block-navigation-item__content:hover {
+	color: var(--wp--preset--color--summit-blue);
+}
+
+/* Social icons */
+.site-footer .footer-social .wp-block-social-link {
+	background: rgba(143, 164, 191, 0.1);
+	border: 1px solid rgba(143, 164, 191, 0.3);
+	border-radius: 6px;
+	padding: 8px;
+	transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.site-footer .footer-social .wp-block-social-link:hover {
+	background: rgba(59, 130, 246, 0.15);
+	border-color: var(--wp--preset--color--summit-blue);
+}
+
+/* Footer bottom links */
+.site-footer .footer-legal a {
+	color: var(--wp--preset--color--mist);
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.site-footer .footer-legal a:hover {
+	color: var(--wp--preset--color--white);
+}
+
+/* ==============================================================
 Reduced Motion
 ============================================================== */
 
