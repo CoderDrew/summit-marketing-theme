@@ -168,6 +168,40 @@ Logo Bar
 	color: var(--wp--preset--color--midnight) !important;
 }
 
+/* ==============================================================
+Testimonials Section
+============================================================== */
+
+.section-testimonials {
+	position: relative;
+	padding-bottom: 60px !important;
+}
+
+/* Staggered layout - second card pushed down */
+.section-testimonials .wp-block-column:nth-child(even) {
+	transform: translateY(60px);
+}
+
+/* Testimonial card styling */
+.section-testimonials .testimonial-card {
+	max-width: 70%;
+	margin-inline: auto;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-testimonials .testimonial-card:hover {
+	transform: scale(1.03);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Separator line */
+.section-testimonials .wp-block-separator {
+	width: 40px;
+	border: none;
+	height: 2px;
+	opacity: 0.3;
+}
+
 /* Process step arrows */
 .section-process .wp-block-columns:last-child .wp-block-column:not(:last-child) {
 	position: relative;
